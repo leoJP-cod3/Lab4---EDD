@@ -2,3 +2,16 @@ Tue Apr 28 03:32:13 AM UTC 2026:
  tests:  1|8
 total_score: 0/60
 398bc50
+Fri May  1 12:13:39 AM UTC 2026: 
+ treemap.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:48:18: error: assignment to ‘TreeNode *’ from incompatible pointer type ‘TreeMap *’ [-Wincompatible-pointer-types]
+   48 |     newMap->root = newMap;
+      |                  ^
+treemap.c:49:21: error: assignment to ‘TreeNode *’ from incompatible pointer type ‘TreeMap *’ [-Wincompatible-pointer-types]
+   49 |     newMap->current = newMap;
+      |                     ^
+9beec43
