@@ -83,13 +83,13 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     if (tree == NULL) return;
 
     if(tree->root == NULL){
-        TreeNode * newNode = createTreeNode(key, value);
+        TreeNode* newNode = createTreeNode(key, value);
         tree->root = newNode;
         tree->current = newNode;
         return;
     }
-    TreeNode * aux = tree->root;
-    TreeNode *parent = NULL;
+    TreeNode* aux = tree->root;
+    TreeNode* parent = NULL;
     
     while (aux != NULL){
         parent = aux;
