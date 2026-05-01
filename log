@@ -39,3 +39,18 @@ Fri May  1 12:38:46 AM UTC 2026:
  tests:  11|6
 total_score: 15/60
 42afe1a
+Fri May  1 01:53:10 AM UTC 2026: 
+ treemap.c | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:105:21: error: ‘newNode’ undeclared (first use in this function)
+  105 |     tree->current = newNode;
+      |                     ^~~~~~~
+treemap.c:105:21: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:92:15: error: variable ‘parent’ set but not used [-Werror=unused-but-set-variable]
+   92 |     TreeNode *parent = NULL;
+      |               ^~~~~~
+cc1: all warnings being treated as errors
+6f93f65
