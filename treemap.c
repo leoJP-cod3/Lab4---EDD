@@ -157,6 +157,16 @@ void eraseTreeMap(TreeMap * tree, void* key){
 // Recuerde actualizar este puntero.
 
 Pair * firstTreeMap(TreeMap * tree) {
+    if (tree == NULL || tree->root == NULL) return NULL;
+
+    TreeNode * minNodo = minimum(tree->root);
+
+    tree->current = minNodo;
+    
+    if(minNodo != NULL){
+        return minNodo->pair;
+    }
+    
     return NULL;
 }
 
