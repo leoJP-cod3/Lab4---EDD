@@ -99,3 +99,21 @@ Fri May  1 06:07:44 PM UTC 2026:
  tests:  17|3
 total_score: 30/60
 35e9e5f
+Fri May  1 06:50:13 PM UTC 2026: 
+ treemap.c | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:174:56: error: expected ‘;’ before ‘:’ token
+  174 |     if (tree == NULL || tree->root == NULL) return NULL:
+      |                                                        ^
+treemap.c:178:8: error: ‘aux’ undeclared (first use in this function)
+  178 |     if(aux->right != NULL){
+      |        ^~~
+treemap.c:178:8: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:191:27: error: expected ‘;’ before ‘:’ token
+  191 |     tree->current = parent:
+      |                           ^
+      |                           ;
+28f43e6
