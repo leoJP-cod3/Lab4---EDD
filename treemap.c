@@ -149,7 +149,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         removeNode(tree, minNode);
         return;
     } 
-
+    return;
     
 }
 
