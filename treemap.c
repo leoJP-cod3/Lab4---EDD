@@ -140,7 +140,7 @@ TreeNode * minimum(TreeNode * x){
 void removeNode(TreeMap * tree, TreeNode* node) {
     if (tree == NULL || node == NULL) return;
     
-    if (node->left != NULL && node->right != NULL){
+    if (node->left == NULL && node->right != NULL){
         TreeNode * minNode = minimum(node->right);
         
         node->pair->key = minNode->pair->key;
