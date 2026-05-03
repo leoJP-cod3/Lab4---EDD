@@ -220,3 +220,29 @@ treemap.c:153:16: error: variable ‘hijo’ set but not used [-Werror=unused-bu
       |                ^~~~
 cc1: all warnings being treated as errors
 3d65a43
+Sun May  3 06:57:54 PM UTC 2026: 
+ treemap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:149:16: error: passing argument 1 of ‘remove’ from incompatible pointer type [-Wincompatible-pointer-types]
+  149 |         remove(tree, minNode);
+      |                ^~~~
+      |                |
+      |                TreeMap *
+In file included from test.c:1:
+/nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/stdio.h:158:32: note: expected ‘const char *’ but argument is of type ‘TreeMap *’
+  158 | extern int remove (const char *__filename) __THROW;
+      |                    ~~~~~~~~~~~~^~~~~~~~~~
+treemap.c:149:9: error: too many arguments to function ‘remove’
+  149 |         remove(tree, minNode);
+      |         ^~~~~~
+/nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/stdio.h:158:12: note: declared here
+  158 | extern int remove (const char *__filename) __THROW;
+      |            ^~~~~~
+treemap.c:163:14: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  163 |     else if (node->parent->left = node) node->parent->left = hijo;
+      |              ^~~~
+cc1: all warnings being treated as errors
+77db8a3
