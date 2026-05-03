@@ -149,6 +149,8 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         removeNode(tree, minNode);
         return;
     } 
+
+    
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
@@ -210,6 +212,25 @@ Pair * nextTreeMap(TreeMap * tree) {
 // Finalmente retorne el par del nodo ub_node.
 
 Pair * upperBound(TreeMap * tree, void* key) {
+    if (tree == NULL || tree->root == NULL) return NULL;
+    
+    TreeNode* aux = tree->root;
+    TreeNode* ub_node = NULL;
+
+    while(aux != NULL){
+        if (is_equal(tree, key, aux->pair->key)){
+            ub_node = aux;
+            break;
+        }
+        if(tree->lower_than(key, aux->pair->key) == 1){
+            ub_node = aux;
+            aux = aux->left;
+        }
+        else{
+            aux = aux->right;
+        }
+    }
+    if (ub_node != NULL) return ub_node->pair;
     return NULL;
 }
 
